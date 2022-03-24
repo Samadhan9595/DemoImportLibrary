@@ -10,20 +10,24 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class ChatActivity extends AppCompatActivity {
 
     WebView wv1;
+    FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         wv1=(WebView)findViewById(R.id.webView);
+        fab=(FloatingActionButton)findViewById(R.id.fab);
 
         wv1.setWebViewClient(new MyBrowser());
         String abc=BuildConfig.LIBRARY_PACKAGE_NAME;
         String apikey=BuildConfig.API_KEY;
-        String botkey=BuildConfig.BOT_KEY;
-        String url=apikey+botkey;
+        //String botkey=BuildConfig.BOT_KEY;
+        String url=apikey+"aef2f0fc-e635-4531-bea5-506d612f0f42";
         //System.out.println(""+url);
 
         //String url="https://www.google.com/";
@@ -45,6 +49,14 @@ public class ChatActivity extends AppCompatActivity {
         wv1.measure(100, 100);
         settings.setUseWideViewPort(true);
         settings.setLoadWithOverviewMode(true);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //wv1.destroy();
+                finish();
+            }
+        });
     }
     private class MyBrowser extends WebViewClient {
         @Override

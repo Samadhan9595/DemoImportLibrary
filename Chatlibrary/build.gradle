@@ -13,9 +13,9 @@ android {
     defaultConfig {
         minSdk 21
         targetSdk 32
-
-        buildConfigField 'String',"API_KEY",localProperties.getProperty('API_KEY')
-        buildConfigField 'String',"BOT_KEY",localProperties.getProperty('BOT_KEY')
+        buildConfigField "String", "API_KEY",localProperties['API_KEY']
+        //buildConfigField 'String',"API_KEY",localProperties.getProperty('API_KEY')
+       // buildConfigField 'String',"BOT_KEY",localProperties.getProperty('BOT_KEY')
         //"\"${props.getProperty('API_KEY')}\""
       /*  buildConfigField ("String","API_KEY","\"${apikey}\"")
         buildConfigField ("String","BOT_KEY","\"${apiKey1}\"")*/
