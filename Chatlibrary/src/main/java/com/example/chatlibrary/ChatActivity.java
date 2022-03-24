@@ -28,7 +28,6 @@ public class ChatActivity extends AppCompatActivity {
         String apikey=BuildConfig.API_KEY;
         //String botkey=BuildConfig.BOT_KEY;
         String url=apikey+"aef2f0fc-e635-4531-bea5-506d612f0f42";
-        //System.out.println(""+url);
 
         //String url="https://www.google.com/";
        // String url= "https://app.gaadibaazar.in/page/?h=aef2f0fc-e635-4531-bea5-506d612f0f42";
@@ -40,8 +39,7 @@ public class ChatActivity extends AppCompatActivity {
         WebSettings settings = wv1.getSettings();
         wv1.getSettings().setLoadsImagesAutomatically(true);
         wv1.getSettings().setJavaScriptEnabled(true);
-       /* settings.javaScriptEnabled = true;
-        settings.useWideViewPort = true;*/
+
         wv1.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         wv1.loadUrl(url);
 
